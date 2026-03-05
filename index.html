@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Our Story</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out With Me? 💕</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="falling-hearts"></div>
+    </div>
 
-<audio id="music" src="music.mp3" loop></audio>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">A Special Question</h1>
+                <div class="date-display" id="dateDisplay"></div>
+            </div>
 
-<div id="intro">
-<h1 class="netflix">OUR STORY</h1>
-<button onclick="startExperience()">Start</button>
-</div>
+            <div class="message-section">
+                <div class="typewriter-text" id="typewriterText"></div>
+            </div>
 
-<div id="main" class="hidden">
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <div class="photo-placeholder">📸</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-placeholder">💑</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-placeholder">❤️</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-placeholder">✨</div>
+                </div>
+            </div>
 
-<canvas id="galaxy"></canvas>
+            <div class="countdown-section">
+                <p class="countdown-label">Time until our date:</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">0</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">0</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">0</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">0</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="slider">
-<img id="slide">
-</div>
+            <div class="button-section">
+                <p class="question">So... what do you say? 💕</p>
+                <div class="buttons">
+                    <button class="btn yes-btn" id="yesBtn" onclick="handleYes()">YES! 💚</button>
+                    <button class="btn no-btn" id="noBtn" onmouseover="moveButton(this)">No 😭</button>
+                </div>
+            </div>
 
-<div class="letter">
-<p id="typed"></p>
-</div>
+            <div class="response" id="response"></div>
+        </div>
+    </div>
 
-<div class="proposal hidden" id="proposal">
-<h2>Will you be mine forever? ❤️</h2>
+    <audio id="bgMusic" loop>
+        <source src="https://assets.mixkit.co/active_storage/musics/2141-51c2e10d-7b3c-4f86-a7da-ec2dfbda3844.mp3" type="audio/mpeg">
+    </audio>
 
-<div class="ring-box" onclick="openRing()">
-<div class="lid"></div>
-<div class="ring">💍</div>
-</div>
+    <div class="confetti" id="confetti"></div>
 
-<div class="buttons hidden" id="buttons">
-<button onclick="yes()">YES ❤️</button>
-<button class="no" onmouseover="move()">NO 😅</button>
-</div>
-
-<p id="result"></p>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
