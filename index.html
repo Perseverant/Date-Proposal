@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Story</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<audio id="music" src="music.mp3" loop></audio>
+
+<div id="intro">
+<h1 class="netflix">OUR STORY</h1>
+<button onclick="startExperience()">Start</button>
+</div>
+
+<div id="main" class="hidden">
+
+<canvas id="galaxy"></canvas>
+
+<div class="slider">
+<img id="slide">
+</div>
+
+<div class="letter">
+<p id="typed"></p>
+</div>
+
+<div class="proposal hidden" id="proposal">
+<h2>Will you be mine forever? ❤️</h2>
+
+<div class="ring-box" onclick="openRing()">
+<div class="lid"></div>
+<div class="ring">💍</div>
+</div>
+
+<div class="buttons hidden" id="buttons">
+<button onclick="yes()">YES ❤️</button>
+<button class="no" onmouseover="move()">NO 😅</button>
+</div>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

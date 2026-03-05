@@ -1,0 +1,95 @@
+body{
+margin:0;
+font-family:sans-serif;
+background:black;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.hidden{
+display:none;
+}
+
+#intro{
+position:absolute;
+top:40%;
+width:100%;
+}
+
+.netflix{
+font-size:60px;
+color:red;
+letter-spacing:10px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px red; }
+to{ text-shadow:0 0 30px red; }
+}
+
+.slider{
+margin-top:60px;
+}
+
+.slider img{
+width:300px;
+border-radius:20px;
+}
+
+.letter{
+margin:30px;
+font-size:20px;
+min-height:80px;
+}
+
+.ring-box{
+width:120px;
+height:80px;
+background:#222;
+margin:auto;
+border-radius:10px;
+position:relative;
+cursor:pointer;
+}
+
+.lid{
+width:120px;
+height:40px;
+background:#333;
+position:absolute;
+top:0;
+transition:1s;
+}
+
+.ring{
+position:absolute;
+bottom:10px;
+left:45px;
+font-size:30px;
+opacity:0;
+transition:1s;
+}
+
+.ring-box.open .lid{
+transform:rotateX(120deg);
+}
+
+.ring-box.open .ring{
+opacity:1;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+border:none;
+border-radius:20px;
+margin:10px;
+cursor:pointer;
+}
+
+.no{
+background:red;
+color:white;
+}
